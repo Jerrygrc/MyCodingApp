@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_project"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardBackgroundColor="@color/background_green"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="6dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_item_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_item_language_text"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_item_time_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_item_initial_time_text"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_horas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_horas_text"
+                android:textColor="@color/green_title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_priority_text"
+                android:textAlignment="textEnd"
+                android:textColor="@color/green_title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_item_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_item_priority_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_project_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/acme"
+            android:text="@string/tv_item_project_name_text"
+            android:textAlignment="center"
+            android:textColor="@color/green_title"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout8"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8" />
+
+        <TextView
+            android:id="@+id/tv_item_description_project"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/acme"
+            android:text="@string/tv_item_description_project_text"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_project_name"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_project_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_project_name" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/tv_item_description_project"
+            app:layout_constraintStart_toStartOf="@+id/tv_item_description_project"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_description_project">
+
+            <TextView
+                android:id="@+id/tv_item_date"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_item_date_text"
+                android:textColor="@color/green_title"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_item_initial_date"
+                android:layout_width="99dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_item_initial_date_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_borrar_proyecto"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/green_btn"
+                android:fontFamily="@font/acme"
+                android:text="@string/btn_borrar_proyecto_text"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

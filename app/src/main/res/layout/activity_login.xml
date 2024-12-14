@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7D9CE"
+    tools:context=".ui.LoginActivity">
+
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/acme"
+        android:text="@string/tv_login_text"
+        android:textColor="@color/green_title"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_name_login"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="60dp"
+        android:ems="10"
+        android:fontFamily="@font/acme"
+        android:hint="@string/et_name_login_hint_text"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_tint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+    <EditText
+        android:id="@+id/et_pwd_login"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:fontFamily="@font/acme"
+        android:hint="@string/et_password_hint_text"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="#637C7A"
+        app:layout_constraintEnd_toEndOf="@+id/et_name_login"
+        app:layout_constraintStart_toStartOf="@+id/et_name_login"
+        app:layout_constraintTop_toBottomOf="@+id/et_name_login" />
+
+    <Button
+        android:id="@+id/btn_acceder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/green_btn"
+        android:fontFamily="@font/acme"
+        android:text="@string/btn_acceder_text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/et_pwd_login"
+        app:layout_constraintStart_toStartOf="@+id/et_pwd_login"
+        app:layout_constraintTop_toBottomOf="@+id/et_pwd_login" />
+
+    <Button
+        android:id="@+id/btn_crear_cuenta_nueva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black_btn"
+        android:fontFamily="@font/acme"
+        android:text="@string/btn_crear_cuenta_text"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/btn_acceder"
+        app:layout_constraintStart_toStartOf="@+id/btn_acceder"
+        app:layout_constraintTop_toBottomOf="@+id/btn_acceder" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

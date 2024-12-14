@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.language.LanguageListActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_language_list"
+        style="@style/ProjectListToolbarTitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_btn"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/toolbar_list_languages_title_text"
+        app:titleTextAppearance="@style/ProjectListToolbarTitleStyle"
+        app:titleTextColor="@color/background_green" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_languajes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_background_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_language_list"
+        tools:itemCount="3"
+        tools:listitem="@layout/item_language" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_lenguaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/fab_add_lenguaje_text"
+        app:backgroundTint="@color/green_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_languajes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <Button
+        android:id="@+id/btn_proyectos"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_proyectos_text"
+        android:textAppearance="@style/ProjectListToolbarTitleStyle"
+        android:textColor="@color/background_green"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_language_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_language_list"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_language_list" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ProjectListToolbarTitleStyle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="fontFamily">@font/acme</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/background_green</item>
+    </style>
+</resources>

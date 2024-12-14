@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background_green"
+    tools:context=".ui.project.ProjectDescriptionActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardBackgroundColor="@color/background_green"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_nombre_proyecto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_nombre_proyecto_text"
+                android:textAlignment="center"
+                android:textColor="@color/green_title"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_descripcion_proyecto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/acme"
+                android:hint="@string/tv_descripcion_proyecto_text"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_tint"
+                app:layout_constraintEnd_toEndOf="@+id/tv_nombre_proyecto"
+                app:layout_constraintStart_toStartOf="@+id/tv_nombre_proyecto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nombre_proyecto" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_descripcion_proyecto"
+                app:layout_constraintStart_toStartOf="@+id/tv_descripcion_proyecto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_descripcion_proyecto">
+
+                <TextView
+                    android:id="@+id/tv_fecha_inicio"
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:fontFamily="@font/acme"
+                    android:text="@string/tv_fecha_inicio_text"
+                    android:textColor="@color/green_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_fecha_inicio_escogida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/acme"
+                    android:hint="@string/tv_fecha_inicio_escogida_text"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_prioridad_proyecto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/acme"
+                android:text="@string/tv_prioridad_proyecto_text"
+                android:textColor="@color/green_title"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout4"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/tv_prioridad_proyecto"
+                app:layout_constraintStart_toStartOf="@+id/tv_prioridad_proyecto"
+                app:layout_constraintTop_toBottomOf="@+id/tv_prioridad_proyecto">
+
+                <RadioGroup
+                    android:id="@+id/rbg_prioridad_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_baja_prioridad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/acme"
+                        android:text="@string/rb_baja_prioridad_text"
+                        android:textColor="@color/green_btn"
+                        android:textColorLink="@color/green_btn" />
+
+                    <RadioButton
+                        android:id="@+id/rb_media_prioridad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/acme"
+                        android:text="@string/rb_media_prioridad_text"
+                        android:textColor="@color/green_btn" />
+
+                    <RadioButton
+                        android:id="@+id/rb_alta_prioridad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/acme"
+                        android:text="@string/rb_alta_prioridad_text"
+                        android:textColor="@color/green_btn" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+                <TextView
+                    android:id="@+id/tv_tiempo_empleado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/acme"
+                    android:text="@string/tv_tiempo_empleado_text"
+                    android:textColor="@color/green_title"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/et_tiempo_emplear_proyecto"
+                    android:layout_width="109dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:fontFamily="@font/acme"
+                    android:hint="@string/et_tiempo_emplear_proyecto_text"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hint_tint"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout6"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+                <TextView
+                    android:id="@+id/tv_lenguaje_proyecto"
+                    android:layout_width="7dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/acme"
+                    android:text="@string/tv_lenguaje_proyecto_text"
+                    android:textColor="@color/green_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_lenguaje_proyecto_escogido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/acme"
+                    android:hint="@string/tv_lenguaje_proyecto_escogido_text" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_detalle_proyecto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:fontFamily="@font/acme"
+                android:hint="@string/et_detalle_proyecto_text"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_tint"
+                app:layout_constraintEnd_toEndOf="@+id/linearLayout7"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout7"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+
+            <Button
+                android:id="@+id/btn_guardar_cambios_proyecto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="24dp"
+                android:backgroundTint="@color/green_btn"
+                android:fontFamily="@font/acme"
+                android:text="@string/btn_guardar_cambios_proyecto_text"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/et_detalle_proyecto"
+                app:layout_constraintStart_toStartOf="@+id/et_detalle_proyecto"
+                app:layout_constraintTop_toBottomOf="@+id/et_detalle_proyecto" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
